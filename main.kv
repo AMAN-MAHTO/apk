@@ -1,0 +1,45 @@
+<MDLabel>:
+    font_style: 'H6'
+    theme_text_color: "Custom"
+    text_color: 3/255, 95/255, 252/255, 1
+
+<grid>
+    name:name  # variables to get output 
+    ph:ph
+    GridLayout:
+        cols:1
+        size: root.width-200, root.height-100
+        pos:100,100
+        MDLabel:
+            size_hint: (.2, None)
+            height: 30
+            text:"Name: "
+        TextInput:
+            id: name
+            size_hint: (.2, None)
+            height: 30
+            multiline: False
+        MDLabel:
+            size_hint: (.2, None)
+            height: 30
+            text:"ph: "
+        TextInput:
+            id: ph
+            multinline: False
+            size_hint: (.2, None)
+            height: 30
+            
+        GridLayout:
+            cols:2
+            MDRaisedButton:
+                text: "Add User"
+                md_bg_color: 145/255, 1, 176/255, 1
+                theme_text_color: "Custom"
+                text_color: 3/255, 95/255, 252/255, 1
+                on_press: root.btn()
+            MDRaisedButton:
+                text: "Verifie User"
+                md_bg_color: 145/255, 1, 176/255, 1
+                theme_text_color: "Custom"
+                text_color: 3/255, 95/255, 252/255, 1
+                on_press: root.verifie_user()
